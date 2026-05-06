@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "../include/prenotazione.h"
 int main() {
     int scelta;
     int risultato;
@@ -23,7 +23,7 @@ int main() {
 
         switch(scelta) {
             case 1:
-                printf("Hai scelto Inserisci\n");
+                inserisciPrenotazione();
                 break;
 
             case 2:
