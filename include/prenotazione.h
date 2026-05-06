@@ -8,6 +8,13 @@ typedef struct {
     char fascia_oraria[20];
 } Prenotazione;
 
+typedef struct Nodo {
+    Prenotazione p;
+    struct Nodo* next;
+} Nodo;
+
 void inserisciPrenotazione();
+void visualizzaPrenotazioni();
+void eliminaPrenotazione();
 
 #endif

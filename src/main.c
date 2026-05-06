@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include "../include/prenotazione.h"
+
 int main() {
-    int scelta;
-    int risultato;
+    int scelta, risultato;
 
     do {
         printf("\n=== MENU ===\n");
-        printf("1. Inserisci elemento\n");
-        printf("2. Visualizza elementi\n");
+        printf("1. Inserisci prenotazione\n");
+        printf("2. Visualizza prenotazioni\n");
+        printf("3. Elimina prenotazione\n");
         printf("0. Esci\n");
         printf("Scelta: ");
 
         risultato = scanf("%d", &scelta);
 
         if (risultato != 1) {
-            printf("Input non valido! Inserisci un numero.\n");
-
-            while (getchar() != '\n'); 
-            scelta = -1;
+            printf("Input non valido!\n");
+            while (getchar() != '\n');
             continue;
         }
 
@@ -25,15 +24,15 @@ int main() {
             case 1:
                 inserisciPrenotazione();
                 break;
-
             case 2:
-                printf("Hai scelto Visualizza\n");
+                visualizzaPrenotazioni();
                 break;
-
+            case 3:
+                eliminaPrenotazione();
+                break;
             case 0:
-                printf("Uscita dal programma\n");
+                printf("Uscita...\n");
                 break;
-
             default:
                 printf("Scelta non valida\n");
         }
